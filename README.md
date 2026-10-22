@@ -1,22 +1,30 @@
 # Maintenance
 
-A Next.js application scaffold with Docker and a GitHub Actions workflow wired up.
+A Next.js app with Docker and a CI workflow already wired up. The plumbing works, the application logic is still to come.
+
+## What it does
+
+- Next.js App Router with a root layout and a landing page
+- GitHub Actions workflow on every push
+- Dockerfile for a container build
+
+About 185 lines across 7 files.
 
 ## Stack
 
-Next.js (App Router) · React · Tailwind CSS · Docker
+Next.js, React, Tailwind CSS, Docker.
 
-## Structure
+## Layout
 
 ```
 src/app/
   layout.js     root layout
   page.js       landing page
-.github/workflows/main.yml   CI pipeline
+.github/workflows/main.yml
 Dockerfile
 ```
 
-## Getting started
+## Run it
 
 ```bash
 npm install
@@ -25,11 +33,11 @@ npm run dev        # http://localhost:3000
 
 ## Scripts
 
-| Command | Description |
+| Command | What it does |
 |---|---|
 | `npm run dev` | Dev server with Turbopack |
 | `npm run build` | Production build |
-| `npm start` | Serve the production build |
+| `npm start` | Serve the build |
 | `npm run lint` | ESLint |
 
 ## Docker
@@ -41,4 +49,4 @@ docker run -p 3000:3000 maintenance
 
 ## Status
 
-Early scaffold — routing, Docker and CI are in place, but the application logic is still to be built.
+Scaffold. Routing, Docker and CI are in place. No forms, no database, no requests yet.
